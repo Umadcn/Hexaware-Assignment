@@ -11,14 +11,15 @@ package hexaware;
 //Search customer by account number.
 //Display all customers.
 public class Customer {
+	private static int counter = 1000;
 	private int accountNumber;
 	private String name;
 	private double balance;
 	private String accountType;
 	private String email;
 	
-	public Customer(int accountNumber, String name, double balance, String accountType, String email) {
-		this.accountNumber = accountNumber;
+	public Customer(String name, double balance, String accountType, String email) {
+        this.accountNumber = ++counter;
 		this.name = name;
 		this.balance = balance;
 		this.accountType = accountType;
@@ -28,9 +29,7 @@ public class Customer {
 	public int getAccountNumber() {
 		return accountNumber;
 	}
-	public void setAccountNumber(int accountNumber) {
-		this.accountNumber = accountNumber;
-	}
+
 	public String getName() {
 		return name;
 	}
